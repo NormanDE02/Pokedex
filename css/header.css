@@ -1,6 +1,13 @@
 .header__headline {
     background-color: lightgray;
+    color: red;
     height: 80px;
-
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
     text-align: center;
+    letter-spacing: 4px;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 2px 2px 4px black;
+    padding-top: 12px;
 }
