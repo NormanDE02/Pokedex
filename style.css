@@ -12,6 +12,10 @@ main {
     padding: 24px 16px;
 }
 
+.section__list {
+    list-style: none;
+}
+
 .card__container {
     height: 200px;
     width: 180px;
