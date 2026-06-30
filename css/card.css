@@ -1,0 +1,14 @@
+.card__container {
+    height: 200px;
+    width: 180px;
+    background-color: green;
+}
+
+.card__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
