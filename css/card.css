@@ -25,3 +25,11 @@
 .card__id-gray {
     color: lightgray;
 }
+
+.card__type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
