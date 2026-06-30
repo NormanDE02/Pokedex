@@ -9,7 +9,6 @@ main {
     background:
         radial-gradient(circle at top left, rgba(239, 68, 68, 0.18), transparent 320px),
         linear-gradient(180deg, #f8fafc 0%, #e5e7eb 100%);
-    padding: 24px 16px;
 }
 
 .section__list {
