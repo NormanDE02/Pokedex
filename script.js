@@ -12,9 +12,9 @@ async function initPokeCard() {
 
 function pokemonId(pokemonlist) {
 
-    for (let index = 0; index < pokemonlist.length; index++) {
+    for (let index = 0; index < 20 && index < pokemonlist.length; index++) {
         const elementPokemon = pokemonlist[index];
         let pokemonNumber = index + 1;
-        console.log(pokemonNumber);  
+        document.getElementById('card-list').innerHTML += renderPokemonCard(pokemonNumber);
     }
 }
