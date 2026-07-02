@@ -5,6 +5,16 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
 async function initPokeCard() {
 
     let responsive = await fetch(baseUrl);
-    let data = responsive.json();
+    let data = await responsive.json();
     console.log(data);   
+    pokemonId(data.results);
+}
+
+function pokemonId(pokemonlist) {
+
+    for (let index = 0; index < pokemonlist.length; index++) {
+        const elementPokemon = pokemonlist[index];
+        let pokemonNumber = index + 1;
+        console.log(pokemonNumber);  
+    }
 }
