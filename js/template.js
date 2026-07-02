@@ -1,4 +1,4 @@
-function renderPokemonCard(pokemonNumber) {
+function renderPokemonCard(pokemonNumber,Pokemonname) {
 
     return `
     <li>
@@ -8,7 +8,7 @@ function renderPokemonCard(pokemonNumber) {
                     <div></div>
                         <span class="card__id-gray">${pokemonNumber}</span>
                     </div>
-                        <h2>Bulbasaur</h2>
+                        <h2>${Pokemonname}</h2>
                     <div class="card__id">
                         <div class="card__type">
                             <span>Grass</span>

@@ -15,6 +15,9 @@ function pokemonId(pokemonlist) {
     for (let index = 0; index < 20 && index < pokemonlist.length; index++) {
         const elementPokemon = pokemonlist[index];
         let pokemonNumber = index + 1;
-        document.getElementById('card-list').innerHTML += renderPokemonCard(pokemonNumber);
+        let Pokemonname = elementPokemon.name;
+        document.getElementById('card-list').innerHTML += renderPokemonCard(pokemonNumber, Pokemonname);
+        console.log(Pokemonname);
+        
     }
 }
