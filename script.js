@@ -19,7 +19,5 @@ function renderPokemonList(pokemonlist) {
         let pokemonUrl = elementPokemon.url;
         document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName);
         console.log(pokemonUrl);
-
-        
     }
 }
