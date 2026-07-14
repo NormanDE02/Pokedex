@@ -17,7 +17,7 @@ async function initPokeCard() {
         let pokemonName = elementPokemon.name;
         let pokemonUrl = elementPokemon.url;
         let pkmonDetails = await pokemonDetails(pokemonUrl);    
-        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName, pkmonDetails.pokemonImg, pkmonDetails.pokemonType);
+        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName, pkmonDetails.pokemonImg, pkmonDetails.pokemonType, pkmonDetails.pokemonType2);
     }
 }
 
@@ -25,9 +25,13 @@ async function pokemonDetails(pokemonUrl) {
     
     let response = await fetch(pokemonUrl);
     let data = await response.json();
+    let pokemonType2 = data.types[1]
+    ? data.types[1].type.name
+    : "";
 
     return {
         pokemonImg: data.sprites.front_default,
-        pokemonType: data.types[0].type.name
+        pokemonType: data.types[0].type.name,
+        pokemonType2: pokemonType2
     };
 }
