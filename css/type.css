@@ -9,3 +9,51 @@
 .water {
     background-color: blue;
 }
+
+.bug {
+    background-color: green;
+}
+
+.normal {
+    background-color: #BDBDBD;
+}
+
+.poison {
+    background-color: violet;
+}
+
+.electric {
+    background-color: yellow;
+}
+
+.ground {
+    background-color: #C9A66B;
+}
+
+.fairy {
+    background-color: #EE99AC;
+}
+
+.fighting {
+    background-color: #B56A3A;
+}
+
+.psychic {
+    background-color: #F85888;
+}
+
+.rock {
+    background-color: #B8A05A;
+}
+
+.ghost {
+    background-color: #705898;
+}
+
+.ice {
+    background-color: #98D8D8;
+}
+
+.dragon {
+    background-color: #5A4FCF;
+}

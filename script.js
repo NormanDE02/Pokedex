@@ -11,7 +11,7 @@ async function initPokeCard() {
 
  async function renderPokemonList(pokemonlist) {
 
-    for (let index = 0; index < 20 && index < pokemonlist.length; index++) {
+    for (let index = 0; index  < pokemonlist.length; index++) {
         const elementPokemon = pokemonlist[index];
         let pokemonNumber = index + 1;
         let pokemonName = elementPokemon.name;
@@ -31,3 +31,4 @@ async function pokemonDetails(pokemonUrl) {
         pokemonType: data.types[0].type.name
     };
 }
+/*< 20 && index*/
