@@ -5,19 +5,25 @@ const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
 async function initPokeCard() {
 
     let response = await fetch(baseUrl);
-    let data = await response.json();
-    console.log(data);   
+    let data = await response.json();  
     renderPokemonList(data.results);
 }
 
-function renderPokemonList(pokemonlist) {
+ async function renderPokemonList(pokemonlist) {
 
     for (let index = 0; index < 20 && index < pokemonlist.length; index++) {
         const elementPokemon = pokemonlist[index];
         let pokemonNumber = index + 1;
         let pokemonName = elementPokemon.name;
         let pokemonUrl = elementPokemon.url;
-        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName);
-        console.log(pokemonUrl);
+        let pokemonImg = await pokemonDetails(pokemonUrl);    
+        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName, pokemonImg);
     }
+}
+
+async function pokemonDetails(pokemonUrl) {
+    
+    let response = await fetch(pokemonUrl);
+    let data = await response.json();
+    return data.sprites.front_default;
 }

@@ -1,4 +1,4 @@
-function getPokemonCardTemplate(pokemonNumber,pokemonName) {
+function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg) {
 
     return `
     <li>
@@ -14,7 +14,7 @@ function getPokemonCardTemplate(pokemonNumber,pokemonName) {
                             <span>Grass</span>
                             <span>Poison</span>
                         </div>
-                            <img src="#" alt="">
+                            <img src="${pokemonImg}" alt="${pokemonName}">
                 </div>
             </div>
         </article>
