@@ -13,5 +13,9 @@ main {
 
 .section__list {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
