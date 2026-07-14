@@ -1,8 +1,8 @@
-function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg) {
+function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg, pokemonType) {
 
     return `
     <li>
-        <article class="card__container">
+        <article class="card__container ${pokemonType}">
             <div class="card__inner">
                 <div class="card__id">
                     <div></div>
