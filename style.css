@@ -18,5 +18,14 @@ main {
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.section__flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
