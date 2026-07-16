@@ -29,3 +29,10 @@ main {
     gap: 40px;
 }
 
+.section__button {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+}
