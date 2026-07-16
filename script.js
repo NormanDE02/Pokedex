@@ -46,16 +46,22 @@ async function pokemonDetails(pokemonUrl) {
 
 
 function loadNextPokemon() {
+
+    if (currentPokemonIndex <= 151) {
+        currentPokemonIndex +=20;
+    }
+
+    document.getElementById('card-list').innerHTML = "";
+    renderPokemonList(pokemonArray);
+}
+
+function loadBackPokemon() {
     document.getElementById('card-list').innerHTML = "";
 
-    currentPokemonIndex += 20;
-
-    for (
-        let index = currentPokemonIndex;
-        index < currentPokemonIndex + 20 && index < pokemonArray.length;
-        index++
-    ) {
-        const pokemon = pokemonArray[index];
+    if (currentPokemonIndex >= 20) {
+        currentPokemonIndex  -=20;
     }
+
+    document.getElementById('card-list').innerHTML = "";
     renderPokemonList(pokemonArray);
 }
