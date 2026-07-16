@@ -11,9 +11,15 @@ async function initPokeCard() {
     renderPokemonList(pokemonArray);
 }
 
+let currentPokemonIndex = 0;
+
  async function renderPokemonList(pokemonArray) {
 
-    for (let index = 0; index < 20 && index < pokemonArray.length; index++) {
+    for (
+        let index = currentPokemonIndex;
+        index < currentPokemonIndex + 20 && index < pokemonArray.length;
+        index++
+    ) {
         const elementPokemon = pokemonArray[index];
         let pokemonNumber = index + 1;
         let pokemonName = elementPokemon.name;
@@ -38,7 +44,6 @@ async function pokemonDetails(pokemonUrl) {
     };
 }
 
-let currentPokemonIndex = 0;
 
 function loadNextPokemon() {
     document.getElementById('card-list').innerHTML = "";
@@ -51,7 +56,6 @@ function loadNextPokemon() {
         index++
     ) {
         const pokemon = pokemonArray[index];
-        console.log(pokemon.name);
     }
     renderPokemonList(pokemonArray);
 }
