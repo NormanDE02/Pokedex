@@ -17,6 +17,13 @@
     margin: 0 auto;
 }
 
+.card__id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .card__id-gray {
     color: lightgray;
 }
