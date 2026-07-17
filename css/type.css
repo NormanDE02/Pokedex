@@ -1,59 +1,59 @@
 .grass {
-    background-color: green;
+    background: linear-gradient(145deg, #4f9f45, #2f6f36);
 }
 
 .fire {
-    background-color:  #f08065;
+    background: linear-gradient(145deg, #f9735b, #c2412f);
 }
 
 .water {
-    background-color: blue;
+    background: linear-gradient(145deg, #3b82f6, #1d4ed8);
 }
 
 .bug {
-    background-color: green;
+    background: linear-gradient(145deg, #84a83c, #5f7f28);
 }
 
 .normal {
-    background-color: #BDBDBD;
+    background: linear-gradient(145deg, #9ca3af, #6b7280);
 }
 
 .poison {
-    background-color: violet;
+    background: linear-gradient(145deg, #b85ac9, #7e3a91);
 }
 
 .electric {
-    background-color: yellow;
+    background: linear-gradient(145deg, #f5b942, #d97706);
 }
 
 .ground {
-    background-color: #C9A66B;
+    background: linear-gradient(145deg, #c89b58, #8f6435);
 }
 
 .fairy {
-    background-color: #EE99AC;
+    background: linear-gradient(145deg, #ec8fb2, #c65d89);
 }
 
 .fighting {
-    background-color: #B56A3A;
+    background: linear-gradient(145deg, #b96f43, #7f3f24);
 }
 
 .psychic {
-    background-color: #F85888;
+    background: linear-gradient(145deg, #ef5f91, #be2f68);
 }
 
 .rock {
-    background-color: #B8A05A;
+    background: linear-gradient(145deg, #a99350, #74652f);
 }
 
 .ghost {
-    background-color: #705898;
+    background: linear-gradient(145deg, #7562a8, #4d3c78);
 }
 
 .ice {
-    background-color: #98D8D8;
+    background: linear-gradient(145deg, #58b9d6, #2586aa);
 }
 
 .dragon {
-    background-color: #5A4FCF;
+    background: linear-gradient(145deg, #6558d9, #3f36a5);
 }
