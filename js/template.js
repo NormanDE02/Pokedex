@@ -9,16 +9,14 @@ function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg, pokemonTy
                         <span class="card__id-gray">${pokemonNumber}</span>
                     </div>
                         <h2>${pokemonName}</h2>
-                    <div class="card__id">
-                        <div class="card__type">
-                            <span>${pokemonType}</span>
-                            <span>${pokemonType2}</span>
-                        </div>
-                            <img src="${pokemonImg}" alt="${pokemonName}">
+                        <img src="${pokemonImg}" alt="${pokemonName}">
+                    <div class="card__type">
+                        <span>${pokemonType}</span>
+                        <span>${pokemonType2}</span>
+                    </div>
                 </div>
             </div>
         </article>
     </li>
     `
-    
 }
