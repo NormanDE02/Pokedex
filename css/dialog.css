@@ -16,3 +16,17 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.dialog__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.dialog__headline {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
