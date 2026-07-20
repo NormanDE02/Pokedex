@@ -83,5 +83,5 @@ async function openDialog(pokemonUrl) {
 
 function renderDialog(pokemonData) {
 
-    document.getElementById('show-dialog').innerHTML = getDialogTemplate();
+    document.getElementById('show-dialog').innerHTML = getDialogTemplate(pokemonData);
 }

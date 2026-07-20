@@ -23,14 +23,14 @@ function getPokemonCardTemplate(pokemonUrl ,pokemonNumber, pokemonName, pokemonI
     `
 }
 
-function getDialogTemplate() {
+function getDialogTemplate(pokemonNumber) {
 
     return `
     <dialog class="dialog__container" id="dialog-pokemon">
             <header class="dialog__header">
                 <div class="dialog__flex">
                     <h2 class="dialog__headline">Bulbasaaur</h2>
-                    <span class="dialog__span">#1</span>
+                    <span class="dialog__span">${pokemonNumber}</span>
                 </div>
                 <div class="dialog__flex">
                     <div>
