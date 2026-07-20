@@ -68,9 +68,14 @@ function loadBackPokemon() {
 
 function openDialog() {
 
-    dialogPokemon.showModal();
-    /*document.getElementById('dialogPokemon').innerHTML;*/
+    const dialog = document.getElementById('dialog-pokemon');
 
+    dialog.showModal();
+    
+    requestAnimationFrame(() => {
+        dialog.classList.add('dialog--visible');
+    })
+    
     console.log('test');
     
 }
