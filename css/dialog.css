@@ -4,3 +4,15 @@
     text-align: center;
     margin:  auto;
 }
+
+.dialog__header {
+    height: 30%;
+    width: 100%;
+    background-color: green;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
