@@ -30,3 +30,9 @@
     font-size: 32px;
     font-weight: bold;
 }
+
+.dialog__span {
+    font-family: 'nunito', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
