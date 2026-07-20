@@ -25,7 +25,7 @@ let currentPokemonIndex = 0;
         let pokemonName = elementPokemon.name;
         let pokemonUrl = elementPokemon.url;
         let pkmonDetails = await pokemonDetails(pokemonUrl);    
-        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonNumber, pokemonName, pkmonDetails.pokemonImg, pkmonDetails.pokemonType, pkmonDetails.pokemonType2);
+        document.getElementById('card-list').innerHTML += getPokemonCardTemplate(pokemonUrl, pokemonNumber, pokemonName, pkmonDetails.pokemonImg, pkmonDetails.pokemonType, pkmonDetails.pokemonType2);
     }
 }
 
@@ -66,22 +66,22 @@ function loadBackPokemon() {
     renderPokemonList(pokemonArray);
 }
 
-function openDialog() {
+async function openDialog(pokemonUrl) {
 
-    renderDialog()
+    const pokemonData = await pokemonDetails(pokemonUrl);
+    renderDialog(pokemonData);
+
     const dialog = document.getElementById('dialog-pokemon');
-
     dialog.showModal();
     
     requestAnimationFrame(() => {
         dialog.classList.add('dialog--visible');
     })
-    
 }
 
 /* closeDialog()*/
 
-function renderDialog() {
+function renderDialog(pokemonData) {
 
-    document.getElementById('show-dialog').innerHTML = getDialog();
+    document.getElementById('show-dialog').innerHTML = getDialogTemplate();
 }

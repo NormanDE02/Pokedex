@@ -1,8 +1,8 @@
-function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg, pokemonType, pokemonType2) {
+function getPokemonCardTemplate(pokemonUrl ,pokemonNumber, pokemonName, pokemonImg, pokemonType, pokemonType2) {
 
     return `
     <li>
-        <button class="card__button" onclick="openDialog()">
+        <button class="card__button" onclick="openDialog('${pokemonUrl}')">
             <article class="card__container ${pokemonType}">
                 <div class="card__inner">
                     <div class="card__id">
@@ -23,7 +23,7 @@ function getPokemonCardTemplate(pokemonNumber,pokemonName, pokemonImg, pokemonTy
     `
 }
 
-function getDialog() {
+function getDialogTemplate() {
 
     return `
     <dialog class="dialog__container" id="dialog-pokemon">
