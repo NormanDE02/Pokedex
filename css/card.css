@@ -1,5 +1,9 @@
+.card__button {
+    border: none;
+    border-radius: 99px;
+}
 .card__container {
-    position: relative;
+   position: relative;
     overflow: hidden;
 
     width: 170px;

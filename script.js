@@ -65,3 +65,12 @@ function loadBackPokemon() {
     document.getElementById('card-list').innerHTML = "";
     renderPokemonList(pokemonArray);
 }
+
+function openDialog() {
+
+    dialogPokemon.showModal();
+    /*document.getElementById('dialogPokemon').innerHTML;*/
+
+    console.log('test');
+    
+}
