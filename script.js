@@ -38,6 +38,8 @@ async function pokemonDetails(pokemonUrl) {
     : "";
 
     return {
+        pokemonName: data.name,
+        pokemonId: data.id,
         pokemonImg: data.sprites.front_default,
         pokemonType: data.types[0].type.name,
         pokemonType2: pokemonType2
