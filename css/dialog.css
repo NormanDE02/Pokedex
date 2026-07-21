@@ -21,6 +21,8 @@ dialog.dialog--visible {
 .dialog__container {
     height: 90vh;
     width: 80vh;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
 }
 
 .dialog__header {
