@@ -27,13 +27,13 @@ function getDialogTemplate(pokemonData) {
 
     return `
     <dialog class="dialog__container" id="dialog-pokemon">
-            <header class="dialog__header">
+            <header class="dialog__header ${pokemonData.pokemonType}">
                 <div class="dialog__flex">
                     <h2 class="dialog__headline">${pokemonData.pokemonName}</h2>
                     <span class="dialog__span">${pokemonData.pokemonId}</span>
                 </div>
                 <div class="dialog__flex">
-                    <div>
+                    <div class="type__flex">
                         <span class="dialog__span">${pokemonData.pokemonType}</span>
                         <span class="dialog__span">${pokemonData.pokemonType2}</span>
                     </div>
