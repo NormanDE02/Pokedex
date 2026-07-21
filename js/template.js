@@ -1,19 +1,19 @@
-function getPokemonCardTemplate(pokemonUrl ,pokemonNumber, pokemonName, pokemonImg, pokemonType, pokemonType2) {
+function getPokemonCardTemplate(pokemonData) {
 
     return `
     <li>
-        <button class="card__button" onclick="openDialog('${pokemonUrl}')">
-            <article class="card__container ${pokemonType}">
+        <button class="card__button" onclick="openDialog('${pokemonData.pokemonUrl}')">
+            <article class="card__container ${pokemonData.pokemonType}">
                 <div class="card__inner">
                     <div class="card__id">
                         <div></div>
-                            <span class="card__id-gray">${pokemonNumber}</span>
+                            <span class="card__id-gray">${pokemonData.pokemonId}</span>
                         </div>
-                            <h2 class="card__headline">${pokemonName}</h2>
-                            <img class="card__img" src="${pokemonImg}" alt="${pokemonName}">
+                            <h2 class="card__headline">${pokemonData.pokemonName}</h2>
+                            <img class="card__img" src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
                         <div class="card__type">
-                            <span>${pokemonType}</span>
-                            <span>${pokemonType2}</span>
+                            <span>${pokemonData.pokemonType}</span>
+                            <span>${pokemonData.pokemonType2}</span>
                         </div>
                     </div>
                 </div>
