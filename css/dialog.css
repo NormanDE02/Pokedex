@@ -25,6 +25,11 @@ dialog.dialog--visible {
     border-bottom-left-radius: 35px;
 }
 
+.dialog__container::backdrop {
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(3px);
+}
+
 .dialog__header {
     height: 30%;
     width: 100%;
