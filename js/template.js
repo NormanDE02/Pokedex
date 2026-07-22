@@ -37,10 +37,14 @@ function getDialogTemplate(pokemonData) {
                         <span class="dialog__span">${pokemonData.pokemonType}</span>
                         <span class="dialog__span">${pokemonData.pokemonType2}</span>
                     </div>
-                    <img src="${pokemonData.pokemonImg}" alt="">
+                    <img src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
                 </div>
             </header>
-            <hr>
+            
+            <nav class="nav__inner">
+                <button class="nav__button nav__button--active ${pokemonData.pokemonType}">About</button>
+                <button class="nav__button ${pokemonData.pokemonType}">Base Stats</button>
+            </nav>
         </dialog>
     `
 }
