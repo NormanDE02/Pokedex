@@ -45,11 +45,20 @@ function getDialogTemplate(pokemonData) {
                 <button class="nav__button nav__button--active ${pokemonData.pokemonType}">About</button>
                 <button class="nav__button ${pokemonData.pokemonType}">Base Stats</button>
             </nav>
-            <section class="dialog__pokeinfo">
-                <span class="pokeinfo__span">height: 7m</span>
-                <span class="pokeinfo__span">weight: 69kg</span>
-                <span class="pokeinfo__span">base experience: 64xp</span>
-            </section>
+            <dl class="dialog__pokeinfo">
+                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                    <dt class="pokeinfo__text">Height</dt>
+                    <dd class="pokeinfo__text">0,7 m</dd>
+                </div>
+                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                    <dt class="pokeinfo__text">Weight</dt>
+                    <dd class="pokeinfo__text">6,9 kg</dd>
+                </div>
+                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                    <dt class="pokeinfo__text">Base Experience</dt>
+                    <dd class="pokeinfo__text">64</dd>
+                </div>
+            </dl>
         </dialog>
     `
 }
