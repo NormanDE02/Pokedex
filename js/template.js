@@ -48,15 +48,15 @@ function getDialogTemplate(pokemonData) {
             <dl class="dialog__pokeinfo">
                 <div class="pokeinfo__inner ${pokemonData.pokemonType}">
                     <dt class="pokeinfo__text">Height</dt>
-                    <dd class="pokeinfo__text">0,7 m</dd>
+                    <dd class="pokeinfo__text">${pokemonData.pokemonHeight / 10} m</dd>
                 </div>
                 <div class="pokeinfo__inner ${pokemonData.pokemonType}">
                     <dt class="pokeinfo__text">Weight</dt>
-                    <dd class="pokeinfo__text">6,9 kg</dd>
+                    <dd class="pokeinfo__text">${pokemonData.pokemonWeight / 10} kg</dd>
                 </div>
                 <div class="pokeinfo__inner ${pokemonData.pokemonType}">
                     <dt class="pokeinfo__text">Base Experience</dt>
-                    <dd class="pokeinfo__text">64</dd>
+                    <dd class="pokeinfo__text">${pokemonData.pokemonBaseExperience}</dd>
                 </div>
             </dl>
         </dialog>

@@ -41,7 +41,10 @@ async function pokemonDetails(pokemonUrl) {
         pokemonId: data.id,
         pokemonImg: data.sprites.front_default,
         pokemonType: data.types[0].type.name,
-        pokemonType2: pokemonType2
+        pokemonType2: pokemonType2,
+        pokemonBaseExperience: data.base_experience,
+        pokemonHeight: data.height,
+        pokemonWeight: data.weight
     };
 }
 
