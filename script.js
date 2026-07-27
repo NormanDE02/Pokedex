@@ -162,8 +162,9 @@ async function initAbout() {
     const pokemonUrl = pokemonArray[currentDialogIndex].url;
     const pokemonData = await pokemonDetails(pokemonUrl);
 
+    clearDialogDetails()
     document.getElementById('info-stats').innerHTML =
-        getDialogTemplate(pokemonData);
+        getAboutTemplate(pokemonData);
 }
 
 function initBaseStats() {
@@ -171,4 +172,9 @@ function initBaseStats() {
     document.getElementById('info-stats').innerHTML =
         getBaseStatTemplate();
 
+}
+
+function clearDialogDetails() {
+
+    document.getElementById("info-stats").innerHTML = "";
 }
