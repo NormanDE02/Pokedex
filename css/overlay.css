@@ -1,3 +1,9 @@
 .overlay__container {
-    
+    width: 400px;
+    height: 400px;
+    margin: auto;
+}
+
+.overlay__inner {
+    background-image: url(../assets/img/Pokeball.png);
 }
