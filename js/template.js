@@ -82,7 +82,7 @@ function getAboutTemplate(pokemonData) {
     `
 }
 
-function getBaseStatTemplate() {
+function getBaseStatTemplate(pokemonData, statName, statValue) {
     
     return`
         <dl class="dialog__pokeinfo">
