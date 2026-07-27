@@ -36,6 +36,7 @@ async function pokemonDetails(pokemonUrl) {
         ? data.types[1].type.name
         : "";
 
+        console.log(data.stats.stat);
     return {
         pokemonUrl: pokemonUrl,
         pokemonName: data.name,
@@ -45,7 +46,8 @@ async function pokemonDetails(pokemonUrl) {
         pokemonType2: pokemonType2,
         pokemonBaseExperience: data.base_experience,
         pokemonHeight: data.height,
-        pokemonWeight: data.weight
+        pokemonWeight: data.weight,
+        pokemonStats: data.stats
     };
 }
 
