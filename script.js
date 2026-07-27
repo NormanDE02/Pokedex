@@ -8,6 +8,7 @@ const baseUrl =
 let pokemonArray = [];
 let currentPokemonIndex = 0;
 let currentDialogIndex = 0;
+let currentTab = 'about';
 
 
 // ========================================
@@ -159,10 +160,15 @@ async function changePokemon(isNext) {
     const pokemonData = await pokemonDetails(pokemonUrl);
 
     renderDialog(pokemonData);
-    renderAboutInDIalog(pokemonData);
+    if (currentTab == 'about') {
+        initAbout()
+    } else {
+        initBaseStats()
+    };
 }
 
 async function initAbout() {
+    currentTab = "about";
     const aboutButton = document.getElementById('about-active');
     aboutButton.classList.add('nav__button--active');
 
@@ -178,6 +184,7 @@ async function initAbout() {
 }
 
 async function initBaseStats() {
+    currentTab = "baseStats";
     const baseButton = document.getElementById('base-active');
     baseButton.classList.add('nav__button--active');
 
