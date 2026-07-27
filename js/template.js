@@ -43,9 +43,9 @@ function getDialogTemplate(pokemonData) {
             
             <nav class="nav__inner">
                 <button class="nav__button nav__button--active ${pokemonData.pokemonType}">About</button>
-                <button class="nav__button ${pokemonData.pokemonType}">Base Stats</button>
+                <button class="nav__button ${pokemonData.pokemonType}" onclick="initBaseStats()">Base Stats</button>
             </nav>
-            <div class="dialog__flexbox">
+            <div class="dialog__flexbox" id="info-stats">
 
                 <dl class="dialog__pokeinfo">
                     <div class="pokeinfo__inner ${pokemonData.pokemonType}">
@@ -73,5 +73,37 @@ function getDialogTemplate(pokemonData) {
                 </footer>
             </div>
         
+    `
+}
+
+function getBaseStatTemplate() {
+    
+    return`
+        <dl class="dialog__pokeinfo">
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">HP</dt>
+                <dd class="pokeinfo__text">45</dd>
+            </div>
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">attack</dt>
+                <dd class="pokeinfo__text">49</dd>
+            </div>
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">defense</dt>
+                <dd class="pokeinfo__text">49</dd>
+            </div>
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">special-attack</dt>
+                <dd class="pokeinfo__text">65</dd>
+            </div>
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">special-defense</dt>
+                <dd class="pokeinfo__text">65</dd>
+            </div>
+            <div class="pokeinfo__inner">
+                <dt class="pokeinfo__text">speed</dt>
+                <dd class="pokeinfo__text">45</dd>
+            </div>
+        </dl>
     `
 }

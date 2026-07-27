@@ -156,3 +156,7 @@ async function changePokemon(isNext) {
 
     renderDialog(pokemonData);
 }
+
+function initBaseStats() {
+    
+}
