@@ -35,8 +35,6 @@ async function pokemonDetails(pokemonUrl) {
     let pokemonType2 = data.types[1]
         ? data.types[1].type.name
         : "";
-
-        console.log(data.stats.stat);
     return {
         pokemonUrl: pokemonUrl,
         pokemonName: data.name,
@@ -165,6 +163,11 @@ async function changePokemon(isNext) {
 }
 
 async function initAbout() {
+    const aboutButton = document.getElementById('about-active');
+    aboutButton.classList.add('nav__button--active');
+
+    const baseButton = document.getElementById('base-active');
+    baseButton.classList.remove('nav__button--active');
 
     const pokemonUrl = pokemonArray[currentDialogIndex].url;
     const pokemonData = await pokemonDetails(pokemonUrl);
