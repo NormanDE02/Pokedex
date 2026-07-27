@@ -70,6 +70,9 @@ async function pokemonDetails(pokemonUrl) {
 // ========================================
 
 async function renderPokemonList(pokemonArray) {
+
+    loadOverlay();
+    await new Promise(resolve => setTimeout(resolve, 300));
     for (
         let index = currentPokemonIndex;
         index < currentPokemonIndex + 20 &&
@@ -82,6 +85,7 @@ async function renderPokemonList(pokemonArray) {
         document.getElementById("card-list").innerHTML +=
             getPokemonCardTemplate(pokemonData);
     }
+    closeOverlay();
 }
 
 
