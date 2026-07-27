@@ -17,7 +17,6 @@ let currentTab = 'about';
 
 async function initPokeCard() {
     loadOverlay();
-    await new Promise(resolve => setTimeout(resolve, 5000));
 
     let response = await fetch(baseUrl);
     let data = await response.json();
