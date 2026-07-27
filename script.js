@@ -7,6 +7,7 @@ const baseUrl =
 
 let pokemonArray = [];
 let currentPokemonIndex = 0;
+let currentDialogIndex = 0;
 
 
 // ========================================
@@ -103,12 +104,16 @@ function clearPokemonList() {
 // ========================================
 
 async function openDialog(pokemonUrl) {
+
+    currentDialogIndex = pokemonArray.findIndex(
+        pokemon => pokemon.url === pokemonUrl
+    );
+
     const pokemonData = await pokemonDetails(pokemonUrl);
 
     renderDialog(pokemonData);
 
-    const dialog = document.getElementById("dialog-pokemon");
-
+    const dialog = document.getElementById("show-dialog");
     dialog.showModal();
 
     requestAnimationFrame(() => {
@@ -127,6 +132,21 @@ function renderDialog(pokemonData) {
 // CLOSE DIALOG
 // ========================================
 
-// function closeDialog() {
-//
-// }
+function closeDialog() {
+    const dialog = document.getElementById("show-dialog");
+    dialog.close();
+ }
+ 
+async function changePokemon(isNext) {
+
+    if (isNext && currentDialogIndex < pokemonArray.length - 1) {
+        currentDialogIndex++;
+    } else if (!isNext && currentDialogIndex > 0) {
+        currentDialogIndex--;
+    }
+
+    const pokemonUrl = pokemonArray[currentDialogIndex].url;
+    const pokemonData = await pokemonDetails(pokemonUrl);
+
+    renderDialog(pokemonData);
+}

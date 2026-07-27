@@ -26,7 +26,7 @@ function getPokemonCardTemplate(pokemonData) {
 function getDialogTemplate(pokemonData) {
 
     return `
-    <dialog class="dialog__container" id="dialog-pokemon">
+    
             <header class="dialog__header ${pokemonData.pokemonType}">
                 <div class="dialog__flex">
                     <h2 class="dialog__headline">${pokemonData.pokemonName}</h2>
@@ -65,13 +65,13 @@ function getDialogTemplate(pokemonData) {
                 <footer class="footer__container">
                     <div class="footer__inner">
                         <div>
-                            <button class="footer__button ${pokemonData.pokemonType}">← Back</button>
-                            <button class="footer__button ${pokemonData.pokemonType}">Next →</button>
+                            <button class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(false)" >← Back</button>
+                            <button class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(true)">Next →</button>
                         </div>
-                        <button class="footer__button ${pokemonData.pokemonType}">Exit</button>
+                        <button class="footer__button ${pokemonData.pokemonType}" onclick="closeDialog()">Exit</button>
                     </div>
                 </footer>
             </div>
-        </dialog>
+        
     `
 }
