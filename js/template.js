@@ -45,20 +45,33 @@ function getDialogTemplate(pokemonData) {
                 <button class="nav__button nav__button--active ${pokemonData.pokemonType}">About</button>
                 <button class="nav__button ${pokemonData.pokemonType}">Base Stats</button>
             </nav>
-            <dl class="dialog__pokeinfo">
-                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
-                    <dt class="pokeinfo__text">Height</dt>
-                    <dd class="pokeinfo__text">${pokemonData.pokemonHeight / 10} m</dd>
-                </div>
-                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
-                    <dt class="pokeinfo__text">Weight</dt>
-                    <dd class="pokeinfo__text">${pokemonData.pokemonWeight / 10} kg</dd>
-                </div>
-                <div class="pokeinfo__inner ${pokemonData.pokemonType}">
-                    <dt class="pokeinfo__text">Base Experience</dt>
-                    <dd class="pokeinfo__text">${pokemonData.pokemonBaseExperience}</dd>
-                </div>
-            </dl>
+            <div class="dialog__flexbox">
+
+                <dl class="dialog__pokeinfo">
+                    <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                        <dt class="pokeinfo__text">Height</dt>
+                        <dd class="pokeinfo__text">${pokemonData.pokemonHeight / 10} m</dd>
+                    </div>
+                    <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                        <dt class="pokeinfo__text">Weight</dt>
+                        <dd class="pokeinfo__text">${pokemonData.pokemonWeight / 10} kg</dd>
+                    </div>
+                    <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                        <dt class="pokeinfo__text">Base Experience</dt>
+                        <dd class="pokeinfo__text">${pokemonData.pokemonBaseExperience}</dd>
+                    </div>
+                </dl>
+
+                <footer class="footer__container">
+                    <div class="footer__inner">
+                        <div>
+                            <button class="footer__button ${pokemonData.pokemonType}">← Back</button>
+                            <button class="footer__button ${pokemonData.pokemonType}">Next →</button>
+                        </div>
+                        <button class="footer__button ${pokemonData.pokemonType}">Exit</button>
+                    </div>
+                </footer>
+            </div>
         </dialog>
     `
 }
