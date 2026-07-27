@@ -175,9 +175,15 @@ async function initAbout() {
 }
 
 async function initBaseStats() {
+    const baseButton = document.getElementById('base-active');
+    baseButton.classList.add('nav__button--active');
+
+    const aboutButton = document.getElementById('about-active');
+    aboutButton.classList.remove('nav__button--active');
+
     const pokemonUrl = pokemonArray[currentDialogIndex].url;
     const pokemonData = await pokemonDetails(pokemonUrl);
-
+    
     clearDialogDetails();
 
     for (let index = 0; index < pokemonData.pokemonStats.length; index++){   

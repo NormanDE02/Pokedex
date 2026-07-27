@@ -42,8 +42,8 @@ function getDialogTemplate(pokemonData) {
             </header>
             
             <nav class="nav__inner">
-                <button class="nav__button nav__button--active ${pokemonData.pokemonType}" onclick="initAbout()">About</button>
-                <button class="nav__button ${pokemonData.pokemonType}" onclick="initBaseStats()">Base Stats</button>
+                <button class="nav__button nav__button--active ${pokemonData.pokemonType}" onclick="initAbout()" id="about-active">About</button>
+                <button class="nav__button ${pokemonData.pokemonType}" onclick="initBaseStats()" id="base-active">Base Stats</button>
             </nav>
             <div class="dialog__flexbox">
                 <dl class="dialog__pokeinfo" id="info-stats">
