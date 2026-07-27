@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,22 +17,25 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/icon/favicon.jpg">
     <title>Pokedex</title>
 </head>
+
 <body onload="initPokeCard()">
-    <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span class="header__span">e</span>x</h1>
+    <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span
+            class="header__span">e</span>x</h1>
     <main>
         <section>
             <ul class="section__list" id="card-list">
-                
+
             </ul>
             <div class="section__flexbox">
                 <button class="section__button" onclick="loadBackPokemon()"> ← Back </button>
                 <Button class="section__button" onclick="loadNextPokemon()"> Next → </Button>
-            </div>    
+            </div>
         </section>
-        
-        <dialog class="dialog__container" id="show-dialog" >
-           
+
+        <dialog class="dialog__container" id="show-dialog">
+
         </dialog>
     </main>
 </body>
+
 </html>
