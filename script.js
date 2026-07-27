@@ -16,12 +16,27 @@ let currentTab = 'about';
 // ========================================
 
 async function initPokeCard() {
+    loadOverlay();
+    await new Promise(resolve => setTimeout(resolve, 5000));
+
     let response = await fetch(baseUrl);
     let data = await response.json();
 
     pokemonArray = data.results;
 
     renderPokemonList(pokemonArray);
+
+    closeOverlay();
+}
+
+function loadOverlay() {
+    let overlay = document.getElementById('load-overlay');
+    overlay.classList.add('overlay__load');
+}
+
+function closeOverlay() {
+    let overlay = document.getElementById('load-overlay');
+    overlay.classList.remove('overlay__load');
 }
 
 

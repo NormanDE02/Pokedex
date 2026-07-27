@@ -1,8 +1,16 @@
 .overlay__container {
-    width: 200px;
-    height: 200px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.overlay__load {
+    display: flex;
 }
 
 .overlay__inner {
