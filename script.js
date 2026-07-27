@@ -178,12 +178,14 @@ async function initBaseStats() {
     const pokemonUrl = pokemonArray[currentDialogIndex].url;
     const pokemonData = await pokemonDetails(pokemonUrl);
 
+    clearDialogDetails();
+
     for (let index = 0; index < pokemonData.pokemonStats.length; index++){   
         const statName  = pokemonData.pokemonStats[index].stat.name;
         const statValue = pokemonData.pokemonStats[index].base_stat;
         
-        document.getElementById('info-stats').innerHTML =
-        getBaseStatTemplate(pokemonData, statName, statValue);
+        document.getElementById('info-stats').innerHTML +=
+            getBaseStatTemplate(pokemonData, statName, statValue);
     }
 }
 

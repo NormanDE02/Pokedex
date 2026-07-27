@@ -86,29 +86,9 @@ function getBaseStatTemplate(pokemonData, statName, statValue) {
     
     return`
         <dl class="dialog__pokeinfo">
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">HP</dt>
-                <dd class="pokeinfo__text">45</dd>
-            </div>
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">attack</dt>
-                <dd class="pokeinfo__text">49</dd>
-            </div>
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">defense</dt>
-                <dd class="pokeinfo__text">49</dd>
-            </div>
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">special-attack</dt>
-                <dd class="pokeinfo__text">65</dd>
-            </div>
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">special-defense</dt>
-                <dd class="pokeinfo__text">65</dd>
-            </div>
-            <div class="pokeinfo__inner">
-                <dt class="pokeinfo__text">speed</dt>
-                <dd class="pokeinfo__text">45</dd>
+            <div class="pokeinfo__inner ${pokemonData.pokemonType}">
+                <dt class="pokeinfo__text">${statName}</dt>
+                <dd class="pokeinfo__text">${statValue}</dd>
             </div>
         </dl>
     `
