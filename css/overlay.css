@@ -2,6 +2,7 @@
     width: 200px;
     height: 200px;
     margin: auto;
+    display: none;
 }
 
 .overlay__inner {
