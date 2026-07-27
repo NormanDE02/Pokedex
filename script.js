@@ -114,6 +114,7 @@ async function openDialog(pokemonUrl) {
     const pokemonData = await pokemonDetails(pokemonUrl);
 
     renderDialog(pokemonData);
+    renderAboutInDIalog(pokemonData);
 
     const dialog = document.getElementById("show-dialog");
     dialog.showModal();
@@ -127,6 +128,11 @@ async function openDialog(pokemonUrl) {
 function renderDialog(pokemonData) {
     document.getElementById("show-dialog").innerHTML =
         getDialogTemplate(pokemonData);
+}
+
+function renderAboutInDIalog(pokemonData) {
+    document.getElementById('info-stats').innerHTML =
+        getAboutTemplate(pokemonData);
 }
 
 
@@ -155,6 +161,7 @@ async function changePokemon(isNext) {
     const pokemonData = await pokemonDetails(pokemonUrl);
 
     renderDialog(pokemonData);
+    renderAboutInDIalog(pokemonData);
 }
 
 async function initAbout() {
