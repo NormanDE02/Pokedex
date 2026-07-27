@@ -139,6 +139,10 @@ function closeDialog() {
     dialog.close();
  }
  
+// ========================================
+// CHANGE POKEMON IM DIALOG
+// ========================================
+
 async function changePokemon(isNext) {
 
     if (isNext && currentDialogIndex < pokemonArray.length - 1) {
