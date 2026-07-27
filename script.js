@@ -157,6 +157,18 @@ async function changePokemon(isNext) {
     renderDialog(pokemonData);
 }
 
+async function initAbout() {
+
+    const pokemonUrl = pokemonArray[currentDialogIndex].url;
+    const pokemonData = await pokemonDetails(pokemonUrl);
+
+    document.getElementById('info-stats').innerHTML =
+        getDialogTemplate(pokemonData);
+}
+
 function initBaseStats() {
-    
+
+    document.getElementById('info-stats').innerHTML =
+        getBaseStatTemplate();
+
 }

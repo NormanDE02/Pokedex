@@ -61,7 +61,7 @@ function getDialogTemplate(pokemonData) {
                         <dd class="pokeinfo__text">${pokemonData.pokemonBaseExperience}</dd>
                     </div>
                 </dl>
-
+            </div>
                 <footer class="footer__container">
                     <div class="footer__inner">
                         <div>
@@ -71,7 +71,7 @@ function getDialogTemplate(pokemonData) {
                         <button class="footer__button ${pokemonData.pokemonType}" onclick="closeDialog()">Exit</button>
                     </div>
                 </footer>
-            </div>
+            
         
     `
 }
