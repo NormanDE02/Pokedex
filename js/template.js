@@ -1,6 +1,5 @@
 function getPokemonCardTemplate(pokemonData) {
-
-    return `
+  return `
     <li>
         <button class="card__button" onclick="openDialog('${pokemonData.pokemonUrl}')">
             <article class="card__container ${pokemonData.pokemonType}">
@@ -20,12 +19,11 @@ function getPokemonCardTemplate(pokemonData) {
             </article>
         </button>
     </li>
-    `
+    `;
 }
 
 function getDialogTemplate(pokemonData) {
-
-    return `
+  return `
     
             <header class="dialog__header ${pokemonData.pokemonType}">
                 <div class="dialog__flex">
@@ -60,12 +58,11 @@ function getDialogTemplate(pokemonData) {
                 </footer>
             
         
-    `
+    `;
 }
 
 function getAboutTemplate(pokemonData) {
-
-    return`
+  return `
         <div class="pokeinfo__inner ${pokemonData.pokemonType}">
             <dt class="pokeinfo__text">Height</dt>
             <dd class="pokeinfo__text">${pokemonData.pokemonHeight / 10} m</dd>
@@ -78,15 +75,14 @@ function getAboutTemplate(pokemonData) {
             <dt class="pokeinfo__text">Base Experience</dt>
             <dd class="pokeinfo__text">${pokemonData.pokemonBaseExperience}</dd>
         </div>
-    `
+    `;
 }
 
 function getBaseStatTemplate(pokemonData, statName, statValue) {
-    
-    return`
+  return `
         <div class="pokeinfo__inner ${pokemonData.pokemonType}">
             <dt class="pokeinfo__text">${statName}</dt>
             <dd class="pokeinfo__text">${statValue}</dd>
         </div>       
-    `
+    `;
 }

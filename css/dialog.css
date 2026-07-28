@@ -1,191 +1,191 @@
 dialog {
-    overflow: hidden;
-    position: fixed;
-    inset: auto;
-    top: 50%;
-    left: 56%;
-    margin: 0;
+  overflow: hidden;
+  position: fixed;
+  inset: auto;
+  top: 50%;
+  left: 56%;
+  margin: 0;
 
-    transform: translate(100vw, -50%);
-    opacity: 0;
+  transform: translate(100vw, -50%);
+  opacity: 0;
 
-    transition:
-        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-        opacity 0.3s ease;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
 }
 
 dialog.dialog--visible {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+  transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 .dialog__container {
-    height: 90vh;
-    width: 80vh;
-    border-top-left-radius: 35px;
-    border-bottom-left-radius: 35px;
+  height: 90vh;
+  width: 80vh;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
 }
 
 .dialog__container::backdrop {
-    background: rgba(15, 23, 42, 0.45);
-    backdrop-filter: blur(3px);
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(3px);
 }
 
 .dialog__header {
-    height: 30%;
-    width: 100%;
-    color: white;
+  height: 30%;
+  width: 100%;
+  color: white;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .dialog__flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 
-.type__flex{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    gap: 8px;
+.type__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 8px;
 }
 
 .dialog__headline {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    text-align: left;
-    text-transform: capitalize;
-    text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
 }
 
 .dialog__span {
-    font-family: 'nunito', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    text-transform: capitalize;
-    text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
+  font-family: "nunito", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
 
-    padding: 3px 8px;
-    background: rgba(15, 23, 42, 0.25);
-    border-radius: 8px;
+  padding: 3px 8px;
+  background: rgba(15, 23, 42, 0.25);
+  border-radius: 8px;
 }
 
 .dialog__span:empty {
-    display: none;
-} 
+  display: none;
+}
 
 .nav__inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin-top: -1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: -1px;
 }
 
 .nav__button {
-    position: relative;
-    font-family: 'nunito', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 12px 8px;
-    border-top: none;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    flex: 1;
-    color: white;
-    text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
-    cursor: pointer;
+  position: relative;
+  font-family: "nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 8px;
+  border-top: none;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  flex: 1;
+  color: white;
+  text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
+  cursor: pointer;
 }
 
 .nav__button--active {
-    color: white;
+  color: white;
 }
 
 .nav__button--active::after {
-    content: "";
-    position: absolute;
-    left: 28px;
-    right: 28px;
-    bottom: 5px;
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 5px;
 
-    height: 3px;
+  height: 3px;
 
-    background-color: white;
-    border-radius: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .dialog__flexbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 400px;
-    overflow-y: auto
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  overflow-y: auto;
 }
 
 .dialog__pokeinfo {
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-    padding: 22px 18px;
-    margin: 0;
-    background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 18px;
+  margin: 0;
+  background: #ffffff;
 }
 
-.pokeinfo__inner{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 12px 14px;
-    background-color: #eef2f7;
-    border: 1px solid #dbe2ea;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
-    white-space: nowrap;
-    gap: 24px;
+.pokeinfo__inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px 14px;
+  background-color: #eef2f7;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  white-space: nowrap;
+  gap: 24px;
 }
 
 .pokeinfo__text {
-    margin: 0;
-    font-family: 'nunito', sans-serif;
-    font-size: 17px;
-    font-weight: 500;
-    color: white;
+  margin: 0;
+  font-family: "nunito", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
 }
 
 .footer__container {
-    height: 80px;
-    width: 100%;
+  height: 80px;
+  width: 100%;
 }
 
 .footer__inner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer__button {
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 6px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 6px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -1,144 +1,144 @@
 .card__button {
-    border: none;
-    border-radius: 99px;
+  border: none;
+  border-radius: 99px;
 }
 .card__container {
-   position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 
-    width: 170px;
-    height: 250px;
-    padding: 16px;
+  width: 170px;
+  height: 250px;
+  padding: 16px;
 
-    border-radius: 18px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
 
-    box-shadow:
-        0 10px 22px rgba(15, 23, 42, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
 
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .card__container::before {
-    content: "";
-    position: absolute;
-    right: -34px;
-    bottom: 34px;
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: 34px;
 
-    width: 130px;
-    height: 130px;
+  width: 130px;
+  height: 130px;
 
-    border: 18px solid rgba(255, 255, 255, 0.11);
-    border-radius: 50%;
+  border: 18px solid rgba(255, 255, 255, 0.11);
+  border-radius: 50%;
 }
 
 .card__container::after {
-    content: "";
-    position: absolute;
-    right: 14px;
-    bottom: 76px;
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 76px;
 
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 
-    background: transparent;
-    border: 10px solid rgba(255, 255, 255, 0.11);
-    border-radius: 50%;
+  background: transparent;
+  border: 10px solid rgba(255, 255, 255, 0.11);
+  border-radius: 50%;
 }
 
 .card__container:hover {
-    transform: translateY(-5px) scale(1.02);
+  transform: translateY(-5px) scale(1.02);
 
-    box-shadow:
-        0 16px 30px rgba(15, 23, 42, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 16px 30px rgba(15, 23, 42, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .card__inner {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    height: 100%;
-    max-width: none;
-    margin: 0;
+  height: 100%;
+  max-width: none;
+  margin: 0;
 
-    color: white;
+  color: white;
 }
 
 .card__id {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .card__id-gray {
-    padding: 3px 8px;
+  padding: 3px 8px;
 
-    color: white;
-    background: rgba(15, 23, 42, 0.25);
-    border-radius: 8px;
+  color: white;
+  background: rgba(15, 23, 42, 0.25);
+  border-radius: 8px;
 
-    font-family: 'Nunito', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .card__headline {
-    width: 100%;
-    margin: 6px 0 0;
+  width: 100%;
+  margin: 6px 0 0;
 
-    color: white;
+  color: white;
 
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
-    text-transform: capitalize;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
 
-    text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
+  text-shadow: 0 2px 5px rgba(15, 23, 42, 0.28);
 }
 
 .card__img {
-    width: 145px;
-    height: 145px;
+  width: 145px;
+  height: 145px;
 
-    object-fit: contain;
+  object-fit: contain;
 
-    filter: drop-shadow(0 10px 7px rgba(15, 23, 42, 0.25));
+  filter: drop-shadow(0 10px 7px rgba(15, 23, 42, 0.25));
 }
 
 .card__type {
-    display: flex;
-    justify-content: flex-start;
-    gap: 7px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 7px;
 
-    width: 100%;
-    margin-top: auto;
+  width: 100%;
+  margin-top: auto;
 }
 
 .card__type span {
-    min-width: 54px;
-    padding: 5px 10px;
+  min-width: 54px;
+  padding: 5px 10px;
 
-    color: white;
-    background: rgba(15, 23, 42, 0.28);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
+  color: white;
+  background: rgba(15, 23, 42, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
 
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .card__type span:empty {
-    display: none;
+  display: none;
 }
