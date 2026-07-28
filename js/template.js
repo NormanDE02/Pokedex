@@ -1,7 +1,7 @@
 function getPokemonCardTemplate(pokemonData) {
   return `
     <li>
-        <button class="card__button" onclick="openDialog('${pokemonData.pokemonUrl}')">
+        <button data-id="card" class="card__button" onclick="openDialog('${pokemonData.pokemonUrl}')">
             <article class="card__container ${pokemonData.pokemonType}">
                 <div class="card__inner">
                     <div class="card__id">
@@ -9,7 +9,7 @@ function getPokemonCardTemplate(pokemonData) {
                             <span class="card__id-gray">${pokemonData.pokemonId}</span>
                         </div>
                             <h2 class="card__headline">${pokemonData.pokemonName}</h2>
-                            <img class="card__img" src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
+                            <img data-id="card-image" class="card__img" src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
                         <div class="card__type">
                             <span>${pokemonData.pokemonType}</span>
                             <span>${pokemonData.pokemonType2}</span>
@@ -25,7 +25,7 @@ function getPokemonCardTemplate(pokemonData) {
 function getDialogTemplate(pokemonData) {
   return `
     
-            <header class="dialog__header ${pokemonData.pokemonType}">
+            <header data-id="overlay-pokemon-name" class="dialog__header ${pokemonData.pokemonType}">
                 <div class="dialog__flex">
                     <h2 class="dialog__headline">${pokemonData.pokemonName}</h2>
                     <span class="dialog__span">${pokemonData.pokemonId}</span>
@@ -35,7 +35,7 @@ function getDialogTemplate(pokemonData) {
                         <span class="dialog__span">${pokemonData.pokemonType}</span>
                         <span class="dialog__span">${pokemonData.pokemonType2}</span>
                     </div>
-                    <img src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
+                    <img data-id="dialog-image" src="${pokemonData.pokemonImg}" alt="${pokemonData.pokemonName}">
                 </div>
             </header>
             
@@ -50,10 +50,10 @@ function getDialogTemplate(pokemonData) {
                 <footer class="footer__container">
                     <div class="footer__inner">
                         <div>
-                            <button class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(false)" >← Back</button>
-                            <button class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(true)">Next →</button>
+                            <button data-id="prev-button" class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(false)" >← Back</button>
+                            <button data-id="next-button" class="footer__button ${pokemonData.pokemonType}" onclick="changePokemon(true)">Next →</button>
                         </div>
-                        <button class="footer__button ${pokemonData.pokemonType}" onclick="closeDialog()">Exit</button>
+                        <button data-id="close-dialog-button" class="footer__button ${pokemonData.pokemonType}" onclick="closeDialog()">Exit</button>
                     </div>
                 </footer>
             

@@ -22,18 +22,18 @@
 <body onload="initPokeCard()">
     <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span
             class="header__span">e</span>x</h1>
-    <main>
+    <main data-id="content">
         <section>
             <ul class="section__list" id="card-list">
 
             </ul>
             <div class="section__flexbox">
                 <button class="section__button" onclick="loadBackPokemon()"> ← Back </button>
-                <Button class="section__button" onclick="loadNextPokemon()"> Next → </Button>
+                <Button data-id="load-more-button" class="section__button" onclick="loadNextPokemon()"> Next → </Button>
             </div>
         </section>
 
-        <dialog class="dialog__container" id="show-dialog" onclick="closeDialogOutside(event)">
+        <dialog data-id="dialog" class="dialog__container" id="show-dialog" onclick="closeDialogOutside(event)">
 
         </dialog>
     </main>
