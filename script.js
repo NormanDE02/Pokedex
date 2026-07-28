@@ -70,7 +70,7 @@ async function pokemonDetails(pokemonUrl) {
     };
 
     pokemonCache[pokemonUrl] = pokemonDetailsData;
-    
+
     return pokemonDetailsData;
 }
 
@@ -171,6 +171,14 @@ function closeDialog() {
     const dialog = document.getElementById("show-dialog");
     dialog.close();
  }
+
+function closeDialogOutside(event) {
+    const dialog = document.getElementById('show-dialog');
+
+    if (event.target === dialog) {
+        dialog.close();
+    }
+}
  
 // ========================================
 // CHANGE POKEMON IM DIALOG
