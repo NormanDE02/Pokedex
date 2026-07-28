@@ -9,6 +9,7 @@ let pokemonArray = [];
 let currentPokemonIndex = 0;
 let currentDialogIndex = 0;
 let currentTab = 'about';
+let pokemonCache = {};
 
 
 // ========================================
@@ -44,13 +45,18 @@ function closeOverlay() {
 // ========================================
 
 async function pokemonDetails(pokemonUrl) {
+
+    if (pokemonCache[pokemonUrl]) {
+        return pokemonCache[pokemonUrl];
+    } 
+
     let response = await fetch(pokemonUrl);
     let data = await response.json();
-
+    
     let pokemonType2 = data.types[1]
         ? data.types[1].type.name
         : "";
-    return {
+    const pokemonDetailsData = {
         pokemonUrl: pokemonUrl,
         pokemonName: data.name,
         pokemonId: data.id,
@@ -62,6 +68,10 @@ async function pokemonDetails(pokemonUrl) {
         pokemonWeight: data.weight,
         pokemonStats: data.stats
     };
+
+    pokemonCache[pokemonUrl] = pokemonDetailsData;
+    
+    return pokemonDetailsData;
 }
 
 
