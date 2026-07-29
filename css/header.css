@@ -69,3 +69,17 @@
 .header__span {
   color: #38bdf8;
 }
+
+.header__flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__input {
+  height: 16px;
+  padding: 12px 4px;
+  border-radius: 26px
+}
