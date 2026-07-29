@@ -20,8 +20,16 @@
 </head>
 
 <body onload="initPokeCard()">
-    <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span
+    <header class="header__container">
+        <div class="header__inner">
+            <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span
             class="header__span">e</span>x</h1>
+            <div>
+                <input data-id="search-input" type="search">
+                <button data-id=”search-button” type="submit">Finde mich</button>
+            </div>
+        </div>
+    </header>
     <main data-id="content">
         <section>
             <ul class="section__list" id="card-list">
