@@ -75,11 +75,29 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
 }
 
 .header__input {
-  height: 16px;
-  padding: 12px 4px;
-  border-radius: 26px
+  height: 36px;
+  padding: 0px 8px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.header__img {
+  height: 34px;
+  width: 30px;
+  margin-right: 8px;
 }
