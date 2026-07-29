@@ -17,6 +17,7 @@ main {
       transparent 320px
     ),
     linear-gradient(180deg, #f8fafc 0%, #e5e7eb 100%);
+  padding-bottom: 80px;
 }
 
 .section__list {
