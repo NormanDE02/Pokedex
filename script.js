@@ -9,6 +9,7 @@ let currentPokemonIndex = 0;
 let currentDialogIndex = 0;
 let currentTab = "about";
 let pokemonCache = {};
+let filterPokemonArray = [];
 
 // ========================================
 // INITIALIZATION
@@ -229,4 +230,19 @@ async function initBaseStats() {
 
 function clearDialogDetails() {
   document.getElementById("info-stats").innerHTML = "";
+}
+
+// search function start
+
+function initSearch() {
+  filterPokemonArray = pokemonArray;
+  renderName();
+}
+
+function renderName() {
+  for (let index = 0; index < filterPokemonArray.length; index++) {
+    const element = filterPokemonArray[index];
+    console.log(`${element}`);
+    
+  }
 }
