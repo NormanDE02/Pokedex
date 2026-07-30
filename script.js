@@ -236,13 +236,27 @@ function clearDialogDetails() {
 
 function initSearch() {
   filterPokemonArray = pokemonArray;
-  renderName();
+
+  const filterWord = document
+    .querySelector('[data-id="search-input"]')
+    .value
+    .toLowerCase();
+
+  filterAndShowPokemonNames(filterWord);
 }
 
-function renderName() {
-  for (let index = 0; index < filterPokemonArray.length; index++) {
-    const element = filterPokemonArray[index];
-    console.log(`${element}`);
-    
+async function renderName() {
+  document.getElementById('card-list').innerHTML = '';
+
+  for (let index = 0; index < filterPokemonArray.length && index < 20; index++) {
+    const pokemonData = await pokemonDetails(
+      filterPokemonArray[index].url);
+      document.getElementById('card-list').innerHTML +=
+      getPokemonCardTemplate(pokemonData);
   }
+}
+
+function filterAndShowPokemonNames(filterWord) {
+  filterPokemonArray = pokemonArray.filter(pokemon => pokemon.name.includes(filterWord));
+  renderName();
 }
