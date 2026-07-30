@@ -248,6 +248,12 @@ function initSearch() {
 async function renderName() {
   document.getElementById('card-list').innerHTML = '';
 
+  if (filterPokemonArray.length === 0) {
+    document.getElementById('card-list').innerHTML =
+      '<p data-id="not-found">Pokémon not found</p>';
+    return;
+  }
+
   for (let index = 0; index < filterPokemonArray.length && index < 20; index++) {
     const pokemonData = await pokemonDetails(
       filterPokemonArray[index].url);
