@@ -235,13 +235,19 @@ function clearDialogDetails() {
 // search function start
 
 function initSearch() {
-  filterPokemonArray = pokemonArray;
+  const searchInput = document.querySelector('[data-id="search-input"]');
 
-  const filterWord = document
-    .querySelector('[data-id="search-input"]')
-    .value
+  const filterWord = searchInput.value
+    .trim()
     .toLowerCase();
 
+  if (filterWord.length < 3) {
+    searchInput.value = '';
+    searchInput.placeholder = 'Need three letters';
+    return;
+  }
+  
+  filterPokemonArray = pokemonArray;
   filterAndShowPokemonNames(filterWord);
 }
 
