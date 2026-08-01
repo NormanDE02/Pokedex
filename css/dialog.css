@@ -45,9 +45,10 @@ dialog.dialog--visible {
 .dialog__flex {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 0 16px;
 }
 
 .type__flex {
@@ -140,9 +141,10 @@ dialog.dialog--visible {
   gap: 16px;
   justify-content: center;
   align-items: center;
-  padding: 22px 18px;
+  padding: 22px 16px;
   margin: 0;
   background: #ffffff;
+  width: 100%;
 }
 
 .pokeinfo__inner {
@@ -176,8 +178,9 @@ dialog.dialog--visible {
 .footer__inner {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 18px;
 }
 
 .footer__button {

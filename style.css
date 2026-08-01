@@ -27,9 +27,10 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 4px;
   margin-top: 8px;
   margin-bottom: 8px;
+  padding: 0 4px;
 }
 
 .section__flexbox {
