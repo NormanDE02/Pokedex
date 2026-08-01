@@ -29,9 +29,9 @@
 
   color: #dc2626;
   font-family: "Rajdhani", sans-serif;
-  font-size: 48px;
+  font-size: 34px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(15, 23, 42, 0.18);
 }
 
@@ -126,6 +126,7 @@
 
 .header__input {
   height: 36px;
+  width: 140px;
   padding: 0px 8px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
