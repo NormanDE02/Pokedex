@@ -20,7 +20,7 @@ dialog.dialog--visible {
 }
 
 .dialog__container {
-  height: 90vh;
+  height: 70vh;
   width: 80vh;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
@@ -168,12 +168,12 @@ dialog.dialog--visible {
   font-size: 17px;
   font-weight: 500;
   color: white;
+  text-transform: capitalize;
 }
 
 .footer__container {
   height: 80px;
   width: 100%;
-  margin-top: 70px;
 }
 
 .footer__inner {
@@ -201,5 +201,6 @@ dialog.dialog--visible {
 
   .dialog__container {
     border-radius: 35px;
+    width: 100vh;
   } 
 }
