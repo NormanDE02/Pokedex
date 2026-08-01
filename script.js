@@ -237,38 +237,41 @@ function clearDialogDetails() {
 function initSearch() {
   const searchInput = document.querySelector('[data-id="search-input"]');
 
-  const filterWord = searchInput.value
-    .trim()
-    .toLowerCase();
+  const filterWord = searchInput.value.trim().toLowerCase();
 
   if (filterWord.length < 3) {
-    searchInput.value = '';
-    searchInput.placeholder = 'Need three letters';
+    searchInput.value = "";
+    searchInput.placeholder = "Need three letters";
     return;
   }
-  
+
   filterPokemonArray = pokemonArray;
   filterAndShowPokemonNames(filterWord);
 }
 
 async function renderName() {
-  document.getElementById('card-list').innerHTML = '';
+  document.getElementById("card-list").innerHTML = "";
 
   if (filterPokemonArray.length === 0) {
-    document.getElementById('card-list').innerHTML =
+    document.getElementById("card-list").innerHTML =
       '<p data-id="not-found">Pokémon not found</p>';
     return;
   }
 
-  for (let index = 0; index < filterPokemonArray.length && index < 20; index++) {
-    const pokemonData = await pokemonDetails(
-      filterPokemonArray[index].url);
-      document.getElementById('card-list').innerHTML +=
+  for (
+    let index = 0;
+    index < filterPokemonArray.length && index < 20;
+    index++
+  ) {
+    const pokemonData = await pokemonDetails(filterPokemonArray[index].url);
+    document.getElementById("card-list").innerHTML +=
       getPokemonCardTemplate(pokemonData);
   }
 }
 
 function filterAndShowPokemonNames(filterWord) {
-  filterPokemonArray = pokemonArray.filter(pokemon => pokemon.name.includes(filterWord));
+  filterPokemonArray = pokemonArray.filter((pokemon) =>
+    pokemon.name.includes(filterWord),
+  );
   renderName();
 }

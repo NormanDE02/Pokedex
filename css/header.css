@@ -92,16 +92,15 @@
   width: 28px;
   height: 28px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      #dc2626 0%,
-      #dc2626 44%,
-      #1f2937 44%,
-      #1f2937 56%,
-      #ffffff 56%,
-      #ffffff 100%
-    );
+  background: linear-gradient(
+    to bottom,
+    #dc2626 0%,
+    #dc2626 44%,
+    #1f2937 44%,
+    #1f2937 56%,
+    #ffffff 56%,
+    #ffffff 100%
+  );
 
   border: 3px solid #1f2937;
   border-radius: 50%;
@@ -133,7 +132,7 @@
 
   font-size: 16px;
   font-weight: 500;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .header__button {
@@ -149,4 +148,7 @@
   width: 30px;
   margin-right: 8px;
   display: block;
+}
+
+@media (min-width: 600px) {
 }
