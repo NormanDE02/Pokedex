@@ -192,3 +192,13 @@ dialog.dialog--visible {
   border-radius: 10px;
   cursor: pointer;
 }
+
+@media (min-width: 600px) {
+  dialog {
+    left: 50%;
+  }
+
+  .dialog__container {
+    border-radius: 35px;
+  } 
+}
