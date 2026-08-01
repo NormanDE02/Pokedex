@@ -178,3 +178,16 @@
     padding-right: 130px;
   }
 }
+
+@media (min-width: 1440px) {
+  .header__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1700px) {
+  .header__inner {
+    padding: 0;
+  }
+}
