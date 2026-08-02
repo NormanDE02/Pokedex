@@ -25,33 +25,36 @@
             <h1 class="header__headline">P<span class="header__span">o</span>k<span class="header__span">e</span>d<span
                     class="header__span">e</span>x</h1>
             <div class="search__container">
-                <div class="header__flexbox">
-                    <input data-id="search-input" type="search" placeholder="Need three letters" class="header__input">
-                    <button data-id=”search-button” type="button" class="header__button" onclick="initSearch()">
-                        <img class="header__img" src=".//assets/img/icon/search-icon.svg" alt="">
+                <div class="header__flexbox" role="search">
+                    <label class="visually-hidden" for="pokemon-search">
+                        Search for a Pokémon
+                    </label>
+                    <input data-id="search-input" type="search" placeholder="Need three letters" class="header__input" autocomplete="off">
+                    <button data-id=”search-button” type="button" class="header__button" aria-label="Search for Pokémon" onclick="initSearch()">
+                        <img class="header__img" src=".//assets/img/icon/search-icon.svg" alt="" aria-hidden="true">
                     </button>
                 </div>
             </div>
         </div>
     </header>
     <main data-id="content">
-        <section class="section__inner">
-            <ul class="section__list" id="card-list">
+        <section class="section__inner" aria-label="Pokémon list">
+            <ul class="section__list" id="card-list" aria-live="polite" aria-busy="false">
 
             </ul>
-            <div class="section__flexbox">
-                <button class="section__button" onclick="loadBackPokemon()"> ← Back </button>
-                <Button data-id="load-more-button" class="section__button" onclick="loadNextPokemon()"> Next → </Button>
-            </div>
+            <nav class="section__flexbox" aria-label="Pokémon pagination">
+                <button class="section__button"  type="button" onclick="loadBackPokemon()"> <span aria-hidden="true">←</span> Back </button>
+                <Button data-id="load-more-button" class="section__button" type="button" onclick="loadNextPokemon()"> Next <span aria-hidden="true">→</span> </Button>
+            </nav>
         </section>
 
-        <dialog data-id="dialog" class="dialog__container" id="show-dialog" onclick="closeDialogOutside(event)">
+        <dialog data-id="dialog" class="dialog__container" id="show-dialog" aria-label="Pokémon details" onclick="closeDialogOutside(event)">
 
         </dialog>
     </main>
-    <div class="overlay__container" id="load-overlay">
+    <div class="overlay__container" id="load-overlay" role="status" aria-live="polite" aria-label="Loading Pokémon">
         <div class="overlay__inner">
-            <img class="overlay__img" src="./assets/img/Pokeball.png" alt="Pokeball">
+            <img class="overlay__img" src="./assets/img/Pokeball.png" alt="Pokeball" aria-hidden="true">
             <span class="overlay__text">Loading-Pokedex</span>
         </div>
     </div>
