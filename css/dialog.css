@@ -24,6 +24,7 @@ dialog.dialog--visible {
   width: 80vh;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
+  overflow-y: auto;
 }
 
 .dialog__container::backdrop {
@@ -130,8 +131,6 @@ dialog.dialog--visible {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 400px;
-  overflow-y: auto;
 }
 
 .dialog__pokeinfo {
