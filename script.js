@@ -94,20 +94,13 @@ async function renderPokemonList(pokemonArray) {
 // NAVIGATION: NEXT AND PREVIOUS PAGE
 // ========================================
 
-function loadNextPokemon() {
-  if (currentPokemonIndex + 20 < pokemonArray.length) {
+function togglePokemon(next) {
+
+  if (next && currentPokemonIndex + 20 < pokemonArray.length)  {
     currentPokemonIndex += 20;
-  }
-
-  clearPokemonList();
-  renderPokemonList(pokemonArray);
-}
-
-function loadBackPokemon() {
-  if (currentPokemonIndex >= 20) {
+  } else if (!next && currentPokemonIndex - 20 >= 0) {
     currentPokemonIndex -= 20;
   }
-
   clearPokemonList();
   renderPokemonList(pokemonArray);
 }
