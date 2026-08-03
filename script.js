@@ -75,20 +75,32 @@ async function pokemonDetails(pokemonUrl) {
 
 async function renderPokemonList(pokemonArray) {
   loadOverlay();
-  await new Promise((resolve) => setTimeout(resolve, 300));
+  let pokemonPromises = [] 
+
   for (
     let index = currentPokemonIndex;
     index < currentPokemonIndex + 20 && index < pokemonArray.length;
     index++
   ) {
     const elementPokemon = pokemonArray[index];
-    let pokemonData = await pokemonDetails(elementPokemon.url);
+    pokemonPromises.push(pokemonDetails(elementPokemon.url));
+  }
+
+  const pokemonDataArray = await Promise.all(pokemonPromises);
+
+  for (
+    let index = 0;
+    index < 0 + 20 && index < pokemonDataArray.length;
+    index++
+  ) {
+    const pokemonData = pokemonDataArray[index];
 
     document.getElementById("card-list").innerHTML +=
       getPokemonCardTemplate(pokemonData);
   }
   closeOverlay();
 }
+
 
 // ========================================
 // NAVIGATION: NEXT AND PREVIOUS PAGE
