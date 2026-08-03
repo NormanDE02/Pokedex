@@ -4,12 +4,16 @@
   padding: 0;
 }
 
+body {
+  height: 100vh;
+}
+
 body:has(dialog[open]) {
   overflow: hidden;
 }
 
 main {
-  min-height: calc(100vh - 80px);
+  height: 92%;
   background:
     radial-gradient(
       circle at top left,
