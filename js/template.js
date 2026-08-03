@@ -24,7 +24,6 @@ function getPokemonCardTemplate(pokemonData) {
 
 function getDialogTemplate(pokemonData) {
   return `
-    
             <header data-id="overlay-pokemon-name" class="dialog__header ${pokemonData.pokemonType}">
                 <div class="dialog__flex">
                     <h2 class="dialog__headline" id="dialog-title">${pokemonData.pokemonName}</h2>
@@ -43,6 +42,7 @@ function getDialogTemplate(pokemonData) {
                 <button class="nav__button nav__button--active ${pokemonData.pokemonType}" type="button" aria-pressed="true" onclick="initAbout()" id="about-active">About</button>
                 <button class="nav__button ${pokemonData.pokemonType}" aria-pressed="false" onclick="initBaseStats()" id="base-active">Base Stats</button>
             </nav>
+        <div class="dialog__scroll">    
             <div class="dialog__flexbox">
                 <dl class="dialog__pokeinfo" id="info-stats" aria-live="polite">
                 </dl>
@@ -56,8 +56,7 @@ function getDialogTemplate(pokemonData) {
                         <button data-id="close-dialog-button" class="footer__button ${pokemonData.pokemonType}" type="button" aria-label="Close Pokémon details"  onclick="closeDialog()">Exit</button>
                     </div>
                 </footer>
-            
-        
+        </div>
     `;
 }
 

@@ -132,6 +132,7 @@ async function openDialog(pokemonUrl) {
 
   const dialog = document.getElementById("show-dialog");
   dialog.showModal();
+  document.body.classList.add("no-scroll");
 
   requestAnimationFrame(() => {
     dialog.classList.add("dialog--visible");
@@ -154,14 +155,20 @@ function renderAboutInDIalog(pokemonData) {
 
 function closeDialog() {
   const dialog = document.getElementById("show-dialog");
+  dialog.classList.remove("dialog--visible");
   dialog.close();
+
+  document.body.classList.remove("no-scroll");
 }
 
 function closeDialogOutside(event) {
   const dialog = document.getElementById("show-dialog");
 
   if (event.target === dialog) {
+    dialog.classList.remove("dialog--visible");
     dialog.close();
+
+    document.body.classList.remove("no-scroll");
   }
 }
 

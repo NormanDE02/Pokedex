@@ -12,9 +12,11 @@ dialog {
   transition:
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.3s ease;
+    flex-direction: column;
 }
 
 dialog.dialog--visible {
+  display: flex;
   transform: translate(-50%, -50%);
   opacity: 1;
 }
@@ -24,7 +26,7 @@ dialog.dialog--visible {
   width: 80vh;
   border-top-left-radius: 35px;
   border-bottom-left-radius: 35px;
-  overflow-y: auto;
+
 }
 
 .dialog__container::backdrop {
@@ -126,6 +128,14 @@ dialog.dialog--visible {
   border-radius: 10px;
 }
 
+.dialog__scroll {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 8px;
+}
+
 .dialog__flexbox {
   display: flex;
   flex-direction: column;
@@ -170,10 +180,10 @@ dialog.dialog--visible {
   text-transform: capitalize;
 }
 
-.footer__container {
+/*.footer__container {
   height: 80px;
   width: 100%;
-}
+}*/
 
 .footer__inner {
   display: flex;

@@ -8,7 +8,7 @@ body {
   height: 100vh;
 }
 
-body:has(dialog[open]) {
+.no-scroll {
   overflow: hidden;
 }
 
