@@ -180,10 +180,11 @@ dialog.dialog--visible {
   text-transform: capitalize;
 }
 
-/*.footer__container {
-  height: 80px;
-  width: 100%;
-}*/
+.footer__button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 .footer__inner {
   display: flex;

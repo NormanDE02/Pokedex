@@ -147,6 +147,17 @@ async function openDialog(pokemonUrl) {
 function renderDialog(pokemonData) {
   document.getElementById("show-dialog").innerHTML =
     getDialogTemplate(pokemonData);
+
+  const prevButton = document.querySelector('[data-id="prev-button"]');
+  const nextButton = document.querySelector('[data-id="next-button"]');
+
+  const lastPokemonIndex = Math.min(
+  currentPokemonIndex + 19,
+  pokemonArray.length - 1
+);
+
+  prevButton.disabled = currentDialogIndex === currentPokemonIndex;
+  nextButton.disabled = currentDialogIndex === lastPokemonIndex;
 }
 
 function renderAboutInDIalog(pokemonData) {
@@ -182,16 +193,24 @@ function closeDialogOutside(event) {
 // ========================================
 
 async function changePokemon(isNext) {
+
+  const lastPokemonIndex = Math.min(
+  currentPokemonIndex + 19,
+  pokemonArray.length - 1
+  );
+
   if (isNext && currentDialogIndex < pokemonArray.length - 1) {
     currentDialogIndex++;
-  } else if (!isNext && currentDialogIndex > 0) {
-    currentDialogIndex--;
+  } else if (!isNext && currentDialogIndex >  currentPokemonIndex) {
+    currentDialogIndex--; 
   }
 
   const pokemonUrl = pokemonArray[currentDialogIndex].url;
   const pokemonData = await pokemonDetails(pokemonUrl);
 
   renderDialog(pokemonData);
+
+
   if (currentTab == "about") {
     initAbout();
   } else {
