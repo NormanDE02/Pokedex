@@ -270,6 +270,15 @@ function initSearch() {
 
   const filterWord = searchInput.value.trim().toLowerCase();
 
+  if (filterWord.length === 0) {
+        filterPokemonArray = pokemonArray;
+        currentPokemonIndex = 0;
+
+        clearPokemonList();
+        renderPokemonList(pokemonArray);
+        return;
+    }
+
   if (filterWord.length < 3) {
     searchInput.value = "";
     searchInput.placeholder = "Need three letters";
@@ -301,8 +310,9 @@ async function renderName() {
 }
 
 function filterAndShowPokemonNames(filterWord) {
-  filterPokemonArray = pokemonArray.filter((pokemon) =>
-    pokemon.name.includes(filterWord),
-  );
-  renderName();
+    filterPokemonArray = pokemonArray
+        .filter((pokemon) => pokemon.name.includes(filterWord))
+        .slice(0, 20);
+
+    renderName();
 }
