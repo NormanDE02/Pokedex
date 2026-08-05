@@ -10,6 +10,7 @@ let currentDialogIndex = 0;
 let currentTab = "about";
 let pokemonCache = {};
 let filterPokemonArray = [];
+let isSearchActive = false;
 
 // ========================================
 // INITIALIZATION
@@ -126,7 +127,9 @@ function clearPokemonList() {
 // ========================================
 
 async function openDialog(pokemonUrl) {
-  currentDialogIndex = pokemonArray.findIndex(
+  const currentPokemonList = getCurrentPokemonList();
+
+  currentDialogIndex = currentPokemonList.findIndex(
     (pokemon) => pokemon.url === pokemonUrl,
   );
 
@@ -193,23 +196,23 @@ function closeDialogOutside(event) {
 // ========================================
 
 async function changePokemon(isNext) {
+  const currentPokemonList = getCurrentPokemonList();
 
-  const lastPokemonIndex = Math.min(
-  currentPokemonIndex + 19,
-  pokemonArray.length - 1
-  );
-
-  if (isNext && currentDialogIndex < pokemonArray.length - 1) {
+  if (
+    isNext &&
+    currentDialogIndex < currentPokemonList.length - 1
+  ) {
     currentDialogIndex++;
-  } else if (!isNext && currentDialogIndex >  currentPokemonIndex) {
-    currentDialogIndex--; 
+  } else if (!isNext && currentDialogIndex > 0) {
+    currentDialogIndex--;
   }
 
-  const pokemonUrl = pokemonArray[currentDialogIndex].url;
+  const pokemonUrl =
+    currentPokemonList[currentDialogIndex].url;
+
   const pokemonData = await pokemonDetails(pokemonUrl);
 
   renderDialog(pokemonData);
-
 
   if (currentTab == "about") {
     initAbout();
@@ -220,29 +223,34 @@ async function changePokemon(isNext) {
 
 async function initAbout() {
   currentTab = "about";
+
   const aboutButton = document.getElementById("about-active");
   aboutButton.classList.add("nav__button--active");
 
   const baseButton = document.getElementById("base-active");
   baseButton.classList.remove("nav__button--active");
 
-  const pokemonUrl = pokemonArray[currentDialogIndex].url;
+  const currentPokemonList = getCurrentPokemonList();
+  const pokemonUrl = currentPokemonList[currentDialogIndex].url;
   const pokemonData = await pokemonDetails(pokemonUrl);
 
   clearDialogDetails();
+
   document.getElementById("info-stats").innerHTML =
     getAboutTemplate(pokemonData);
 }
 
 async function initBaseStats() {
   currentTab = "baseStats";
+
   const baseButton = document.getElementById("base-active");
   baseButton.classList.add("nav__button--active");
 
   const aboutButton = document.getElementById("about-active");
   aboutButton.classList.remove("nav__button--active");
 
-  const pokemonUrl = pokemonArray[currentDialogIndex].url;
+  const currentPokemonList = getCurrentPokemonList();
+  const pokemonUrl = currentPokemonList[currentDialogIndex].url;
   const pokemonData = await pokemonDetails(pokemonUrl);
 
   clearDialogDetails();
@@ -251,11 +259,12 @@ async function initBaseStats() {
     const statName = pokemonData.pokemonStats[index].stat.name;
     const statValue = pokemonData.pokemonStats[index].base_stat;
 
-    document.getElementById("info-stats").innerHTML += getBaseStatTemplate(
-      pokemonData,
-      statName,
-      statValue,
-    );
+    document.getElementById("info-stats").innerHTML +=
+      getBaseStatTemplate(
+        pokemonData,
+        statName,
+        statValue,
+      );
   }
 }
 
@@ -266,18 +275,23 @@ function clearDialogDetails() {
 // search function start
 
 function initSearch() {
-  const searchInput = document.querySelector('[data-id="search-input"]');
+  const searchInput = document.querySelector(
+    '[data-id="search-input"]'
+  );
 
-  const filterWord = searchInput.value.trim().toLowerCase();
+  const filterWord = searchInput.value
+    .trim()
+    .toLowerCase();
 
   if (filterWord.length === 0) {
-        filterPokemonArray = pokemonArray;
-        currentPokemonIndex = 0;
+    isSearchActive = false;
+    filterPokemonArray = pokemonArray;
+    currentPokemonIndex = 0;
 
-        clearPokemonList();
-        renderPokemonList(pokemonArray);
-        return;
-    }
+    clearPokemonList();
+    renderPokemonList(pokemonArray);
+    return;
+  }
 
   if (filterWord.length < 3) {
     searchInput.value = "";
@@ -285,8 +299,19 @@ function initSearch() {
     return;
   }
 
-  filterPokemonArray = pokemonArray;
+  isSearchActive = true;
   filterAndShowPokemonNames(filterWord);
+}
+
+function getCurrentPokemonList() {
+  if (isSearchActive) {
+    return filterPokemonArray;
+  }
+
+  return pokemonArray.slice(
+    currentPokemonIndex,
+    currentPokemonIndex + 20
+  );
 }
 
 async function renderName() {
